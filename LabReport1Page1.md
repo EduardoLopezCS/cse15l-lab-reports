@@ -4,7 +4,7 @@ by Eduardo Lopez
 
 Example of the command with no arguments:
 
-<sup> The output is the result of the command being used without a directory argument to be changed to, so therefore it doesn't do anything.
+<sup> The output is the result of the command being used without a directory argument to be changed to, so therefore it doesn't do anything (Errors no)
 ```
 [user@sahara ~]$ pwd
 /home
@@ -14,7 +14,7 @@ Example of the command with no arguments:
 
 Example of the command with a path to a directory:
 
-<sup> The output is the command doing it's job, which is changing the current directory to the directory given as an arguement.
+<sup> The output is the command doing it's job, which is changing the current directory to the directory given as an arguement. (Errors no)
 ```
 [user@sahara ~]$ pwd
 /home
@@ -24,7 +24,7 @@ Example of the command with a path to a directory:
 
 Example of the command with a path to a file:
 
-<sup> The output is an error because of the result of the command being used on a file path rather than a directory. It doesn't work on files which is why it stated "**Not a directory**".
+<sup> The output is an error because of the result of the command being used on a file path rather than a directory. It doesn't work on files which is why it stated "**Not a directory**". (Errors yes)
 ```
 [user@sahara ~]$ pwd 
 /home
