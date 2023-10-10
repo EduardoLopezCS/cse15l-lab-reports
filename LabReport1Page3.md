@@ -1,1 +1,32 @@
+### Third Command: cat
 
+Example of the command with no arguments:
+
+<sup> The command does nothing since there isn't a given argument(path) to a file so that it can do it's job to print out the contents of the file. (Errors maybe) Although, there does seem to be a possible error because after running it, it doesn't reset back to the /home directory but instead, stays in a loop where it prints whatever input the user types into the terminal. 
+```
+[user@sahara ~]$ pwd
+/home
+[user@sahara ~]$ cat
+```
+
+Example of the command with a path to a directory:
+
+<sup> The output is just the command stating that the given argument path is a directory. It could be considered an error since it only prints out the contents of a given file path. (Errors yes)
+```
+[user@sahara ~]$ pwd
+/home
+[user@sahara ~]$ cat lecture1
+cat: lecture1: Is a directory
+[user@sahara ~]$ 
+```
+
+Example of the command with a path to a file:
+
+<sup> This output demonstrates how cat should be used. Giving it an argument path to a file, cat prints out the contents of the given file with no errors whatsoever. (Errors no) 
+```
+[user@sahara ~]$ pwd
+/home
+[user@sahara ~]$ cat lecture1/messages/en-us.txt
+Hello World!
+[user@sahara ~]$ 
+```
