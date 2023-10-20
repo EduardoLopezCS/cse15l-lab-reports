@@ -14,7 +14,7 @@ Example of the command with no arguments:
 
 Example of the command with a path to a directory:
 
-<sup> The output is the command **cd** doing it's job, which is changing the current directory to the directory given as an argument. That means instead of a command begining on the default root directory which is **/home** in this case, it now begins on the nested directory **/lecture1**. (Errors no)
+<sup> The output is the command **cd** doing it's job, which is changing the current directory to the directory given as an argument. That means instead of a command being used on the default(root) directory which **/home** in this case, it now begins on the nested directory **/lecture1** or in general, the directory that **cd** allowed to be working currently. (Errors no)
 ```
 [user@sahara ~]$ pwd
 /home
