@@ -2,7 +2,7 @@
 
 Example of the command with no arguments:
 
-<sup> The output is the result of the command being used to list the folders or files of the current working directory of the given path. In this case, there was no given path so it listed the contents of the **/home** directory which was the **lecture1** nested directory. (Errors no)
+<sup> The output is the result of the command being used to list the files/directories inside the current working directory of the given path. In this case, there was no given path so it listed the contents of the **/home** directory which was the **lecture1** nested directory. (Errors no)
 ```
 [user@sahara ~]$ pwd
 /home
