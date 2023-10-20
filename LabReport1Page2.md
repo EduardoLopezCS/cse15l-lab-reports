@@ -24,7 +24,7 @@ Hello.class  Hello.java  messages  README
 
 Example of the command with a path to a file:
 
-<sup> The output is just the command printing the path to the file (same as the the given argument) because after the file **ar-sy.txt**, there is no directory or file inside of it to list. Although, if we were to **ls lecture1/messages/ar-sy.txt lecture1**, the command would still print the file path while in the same time, print the lecture1 contents because it's another/seprate arguement. (Errors no)
+<sup> The output is just the command printing the path to the file (same as the the given argument) because after the file **ar-sy.txt**, there is no directory or file inside of it to list. Although, if we were to **ls lecture1/messages/ar-sy.txt lecture1**, the command would still print the file path while in the same time, print the lecture1 contents because it's another/seprate argument. (Errors no)
 ```
 [user@sahara ~]$ pwd
 /home
