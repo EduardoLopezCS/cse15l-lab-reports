@@ -11,12 +11,15 @@ class Handler implements URLHandler {
 
     int num = 0;
 
+    String log = "";
+
     public String handleRequest(URI url) {
-            if(url.getPath().contains("/add")){
+            if(url.getPath().contains("/add-message")){
                 String[] parameters = url.getQuery().split("=");
                 if(parameters[0].equals("s")){
                     num += 1;
-                    return String.format(num + ". " + parameters[1] + "\n");
+                    log += String.format(num + ". " + parameters[1] + "\n");
+                    return log;
                 }
                 return "404 Not Found!";
             }
@@ -44,7 +47,7 @@ ScreenShot Example 1:
 
 ScreenShot Example 2: 
 
-![Image](Ex2.png)
+![Image](Screen1.png)
 
 Explanation for both Screenshots:
 
