@@ -66,25 +66,28 @@ For both examples above, I used the **-type** option for the find command. It is
 
 ### Two examples for option **-size**:
 ```
-find . -size 10
-./government/Media
-./government/Media/Annual_Fee.txt
-./government/Media/Working_for_Free.txt
-./government/Media/Library_Lawyers.txt
-./government/Media/Politician_Practices.txt
-./plos/pmed.0020239.txt
-./plos/pmed.0020187.txt
-./plos/pmed.0020236.txt
-./plos/pmed.0020235.txt
-./plos/pmed.0020257.txt
-./plos/pmed.0020242.txt
+find . -size  -1k
+.
+./government
+./government/About_LSC
+./government/Env_Prot_Agen
+./government/Alcohol_Problems
+./government/Post_Rate_Comm
+./plos/pmed.0020191.txt
+./plos/pmed.0020226.txt
+./911report
 ```
 ```
-find . -size 100
-./biomed/1471-2377-3-4.txt
-./biomed/gb-2003-4-6-r39.txt
-./biomed/gb-2003-4-3-r20.txt
+find . -size +200k
+./government/About_LSC/commission_report.txt
+./government/Env_Prot_Agen/bill.txt
+./government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+./government/Gen_Account_Office/d01591sp.txt
+./911report/chapter-13.4.txt
+./911report/chapter-13.5.txt
+./911report/chapter-3.txt
 ```
-Both examples above show the use of the **-size** option for **find**. This option searches for a specific file(s) given a size like 10MB, 100MB etc. It's useful if the programmer knows the size of the files, they can get a list of the ones that accomodate the given size. The second example listed the larger sized files(100MB) than the first example, which were smaller (10MB) files. 
+Both examples above show the use of the **-size** option for **find**. This option searches for a specific file(s) given a size like 10M(megabytes), 10000k(kilobytes), 2G(gigabytes), etc. It's useful if the programmer knows the size of the files, they can get a list of the ones that accomodate the given size. It also helps to list out the files that are either greater than or less than the given size. The second example listed the larger sized files(greater than 200 kilobytes) than the first example, which were smaller(less than 1 kilobyte) files. 
 
 Outside source: https://www.linuxteck.com/find-command-in-linux-with-examples/
