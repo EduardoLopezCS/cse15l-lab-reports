@@ -86,3 +86,5 @@ find . -size 100
 ./biomed/gb-2003-4-3-r20.txt
 ```
 Both examples above show the use of the **-size** option for **find**. This option searches for a specific file(s) given a size like 10MB, 100MB etc. It's useful if the programmer knows the size of the files, they can get a list of the ones that accomodate the given size. The second example listed the larger sized files(100MB) than the first example, which were smaller (10MB) files. 
+
+Outside source: https://www.linuxteck.com/find-command-in-linux-with-examples/
