@@ -42,4 +42,6 @@ As you see in the image above, the test has one failure.**
 
 ### Sixth Step:
 ![Image](image13.png)
+**Keys pressed: git add ListExamples.java, git commit -m "Updated", git push**
 
+**Summary: I used the git commands add, commit, and push to commit the file I edited wih vim to my github account using my ucsd ieng6 account terminal.**
