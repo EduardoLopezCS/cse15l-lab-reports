@@ -30,4 +30,4 @@ As you see in the image above, the test has one failure.**
 ![Image](image9.png)
 ![Image](image10.png)
 ![Image](image11.png)
-**Keys pressed: **
+**Keys pressed: vim ListExamples.java < j > x44 < l > x**
