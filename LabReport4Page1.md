@@ -23,4 +23,11 @@ to use the command vim with.**
 As you see in the image above, the test has one failure.**
 
 ### Fourth Step:
-
+![Image](image5.png)
+![Image](image6.png)
+![Image](image7.png)
+![Image](image8.png)
+![Image](image9.png)
+![Image](image10.png)
+![Image](image11.png)
+**Keys pressed: **
