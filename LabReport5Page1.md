@@ -5,7 +5,7 @@ by Eduardo Lopez
 ## 1.1(Student Question): 
 ![Image](image1.1.png)
 
-Hello my name is Eduardo, I am having trouble figureing out what's creating this failure on my code. The Junit test says my ListExamples.java file is failing a test relating to a TestTimedOutException. I have a feeling it's related to the merge method where something isn't adding up or merging correctly resulting in the Junit test timing out. 
+Hello my name is Eduardo, I am having trouble figureing out what's creating this failure on my code. The Junit test says my ```ListExamples.java``` file is failing a test relating to a ```TestTimedOutException```. I have a feeling it's related to the merge method where something isn't adding up or merging correctly resulting in the Junit test timing out. 
 
 ## 1.2(TA Response):
 Hello Eduardo, thank you for making your question private. From the looks of the symptom, there is a timeout error meaning a possible while loop condition isn't being met, resulting in an infinite loop. With that in mind, take a look at your while loops. What would need to be done in order for the while loop or loops to eventually break(conditions met) and return the proper results.
@@ -14,11 +14,11 @@ Hello Eduardo, thank you for making your question private. From the looks of the
 ![Image](image1.22.png)
 ![Image](image1.3.png)
 
-Thank you. I found the bug. It makes sense why there would be a timeout error. The conditions of my last while loop in my method would have never been met because instead of updating index2 of the second list for the loop, I was updating the index1 which was already being done with the while loop above it. That's why the loop never broke because the proper indeces weren't even being updated/iterated for it to move onto the next index on the second list. 
+Thank you. I found the bug. It makes sense why there would be a timeout error. The condition of my last while loop in my method would have never been met because instead of updating ```index2``` of ```list2``` for the loop, I was updating the ```index1``` which was already being done with the while loop above it. That's why the loop never broke because the proper indeces weren't even being incremented for the loop to move onto the next index on ```list2```. 
 
 ## 1.4(Information):
 
-File and Directory Structure:
+File and directory structure:
 
 ![Image](image1.5.png)
 ![Image](image1.4.png)
@@ -115,4 +115,8 @@ bash test.sh
 ```
 
 What to edit to fix bug:
-To fix the bug, the programmer would have to edit line 43 of the ListExamples.java file. They would have to change index1 to index2 in order for the while loop's conditions to be met and break eventually and not timeout. It's a simple and common bug that can cause a confusing symptom but thanks to the Junit test, it made it much easier to locate it in the code. 
+
+To fix the bug, the programmer would have to edit line 43 in the ```ListExamples.java``` file, changing ```index1``` to ```index2``` in order for the while loop's conditions to be met and not timeout since incrementing ```index1``` wasn't for ```list2``` but instead, ```list1```. It's a simple and common bug that can cause a confusing symptom but thanks to the Junit test, it made it much easier to locate it in the code. 
+
+## Part 2:
+Something that I find not just very useful for future programming and file text editing but interesting and fun at the same is the command ```vim```. With ```vim```, you can fully edit any type of file without using an IDE because it's almost like an integrated IDE inside the terminal itself. It has very useful commands to navigate through text, edit, and search for anything like a word or character. Not just for any normal text file, but for coding as well. Like in CSE 30 when programming with C, ```vim``` helps to program C in a file without using an outside IDE that may require additional extensions. The only downside to it is if it's used by a programmer that doesn't have much experience with it, it may be more difficult and time consuming to edit a file with it compared to just using an IDE because they may not have the knowledge of the shortcut commands ```vim``` has to offer.
