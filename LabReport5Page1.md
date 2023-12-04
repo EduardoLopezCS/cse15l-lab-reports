@@ -17,18 +17,102 @@ Hello Eduardo, thank you for making your question private. From the looks of the
 Thank you. I found the bug. It makes sense why there would be a timeout error. The conditions of my last while loop in my method would have never been met because instead of updating index2 of the second list for the loop, I was updating the index1 which was already being done with the while loop above it. That's why the loop never broke because the proper indeces weren't even being updated/iterated for it to move onto the next index on the second list. 
 
 ## 1.4(Information):
+
 File and Directory Structure:
-![Image](image1.4.png)
+
 ![Image](image1.5.png)
+![Image](image1.4.png)
 
 Contents of each file before fixing bug:
-``
 
-``
+ListExamples.java:
+```
+import java.util.ArrayList;
+import java.util.List;
 
-Commands ran to trigger bug:
-``
+interface StringChecker { boolean checkString(String s); }
 
-``
+class ListExamples {
 
-What to edit top fix bug:
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+
+}
+```
+
+ListExamplesTests.java:
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.util.ArrayList;
+
+
+public class ListExamplesTests {
+	@Test(timeout = 500)
+	public void testMerge1() {
+    		List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("a", "b"));
+		assertArrayEquals(new String[]{ "a", "b", "x", "y"}, ListExamples.merge(l1, l2).toArray());
+	}
+	
+	@Test(timeout = 500)
+        public void testMerge2() {
+		List<String> l1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("c", "d", "e"));
+		assertArrayEquals(new String[]{ "a", "b", "c", "c", "d", "e" }, ListExamples.merge(l1, l2).toArray());
+        }
+
+}
+```
+
+test.sh:
+```
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+```
+
+Commands ran to trigger bug(test command):
+```
+bash test.sh
+```
+
+What to edit to fix bug:
+To fix the bug, the programmer would have to edit line 43 of the ListExamples.java file. They would have to change index1 to index2 in order for the while loop's conditions to be met and break eventually and not timeout. It's a simple and common bug that can cause a confusing symptom but thanks to the Junit test, it made it much easier to locate it in the code. 
